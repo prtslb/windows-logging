@@ -5,7 +5,8 @@ win_log_dir: 'c:\ProgramData\ansible\log'
 
 win_powershellmodules:
 ## for 7z uncompress
-  - Pscx
+#  - Pscx
+  - Posh-Sysmon
 
 ## if empty, will go in User documents
 ## Note: env variable are not resolved

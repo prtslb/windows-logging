@@ -177,60 +177,60 @@ win_audit_regpaths:
   - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellServiceObjects', i: 'ContainerInherit' }
   - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers', i: 'ContainerInherit' }
   - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\TBDEn', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Group Policy\Scripts', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\Audit', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Shell Extensions', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\AeDebug', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Drivers32', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Font Drivers', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\SystemRestore', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Windows\IconServiceLib', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Windows', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Policies\Microsoft\Windows\System\Scripts', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Policies\Microsoft\PowerShell', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\SafeBoot', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\Session Manager\Environment', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\Print\Monitors', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\NetworkProvider\Order', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\StartupPrograms', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Services', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\services\NTDS', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Services\RemoteAccess', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Services\WinSock2', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\Session Manager', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\Print\Monitors', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\NetworkProvider\Order', i: 'ContainerInherit' }
-  - { k: 'HKLM:\System\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\StartupPrograms', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Classes\*\ShellEx', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Classes\AllFileSystemObjects\ShellEx', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Classes\Directory\ShellEx', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Classes\Folder\ShellEx', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Classes\CLSID\{083863F1-70DE-11d0-BD40-00A0C911CE86}\Instance', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 0\CryptSIPDllGetSignedDataMsg\{SIP Guid}', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 0\CryptSIPDllVerifyIndirectData\{SIP Guid}', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\Providers\Trust\FinalPolicy\{SIP Guid}', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\.NETFramework', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Active Setup\Installed Components', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\Outlook\Addins', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\Excel\Addins', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\PowerPoint\Addins', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\Word\Addins', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellServiceObjects', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Drivers32', i: 'ContainerInherit' }
-  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options', i: 'ContainerInherit' }
-# MUICACHE
-  - { k: 'HKCU:\Software\Microsoft\Windows\ShellNoRoam\MUICache', i: 'ContainerInherit' }
-  - { k: 'HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MUICache', i: 'ContainerInherit' }
-  - { k: 'HKCR:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MUICache', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\TBDEn', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Group Policy\Scripts', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\Audit', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Shell Extensions', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\AeDebug', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Drivers32', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Font Drivers', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\SystemRestore', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Windows\IconServiceLib', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Windows', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Policies\Microsoft\Windows\System\Scripts', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Policies\Microsoft\PowerShell', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\SafeBoot', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\Session Manager\Environment', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\Print\Monitors', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\NetworkProvider\Order', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\StartupPrograms', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Services', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\services\NTDS', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Services\RemoteAccess', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Services\WinSock2', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\Session Manager', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\Print\Monitors', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\NetworkProvider\Order', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\System\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\StartupPrograms', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Classes\*\ShellEx', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Classes\AllFileSystemObjects\ShellEx', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Classes\Directory\ShellEx', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Classes\Folder\ShellEx', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Classes\CLSID\{083863F1-70DE-11d0-BD40-00A0C911CE86}\Instance', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 0\CryptSIPDllGetSignedDataMsg\{SIP Guid}', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\OID\EncodingType 0\CryptSIPDllVerifyIndirectData\{SIP Guid}', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Cryptography\Providers\Trust\FinalPolicy\{SIP Guid}', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\.NETFramework', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Active Setup\Installed Components', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\Outlook\Addins', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\Excel\Addins', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\PowerPoint\Addins', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Office\Word\Addins', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellServiceObjects', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellExecuteHooks', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Drivers32', i: 'ContainerInherit' }
+#  - { k: 'HKLM:\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options', i: 'ContainerInherit' }
+## MUICACHE
+#  - { k: 'HKCU:\Software\Microsoft\Windows\ShellNoRoam\MUICache', i: 'ContainerInherit' }
+#  - { k: 'HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MUICache', i: 'ContainerInherit' }
+#  - { k: 'HKCR:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MUICache', i: 'ContainerInherit' }
 
 win_audit_regpaths_exclude:
   - { k: 'HKLM:\SYSTEM\CurrentControlSet\services\Tcpip', i: 'ContainerInherit' }
