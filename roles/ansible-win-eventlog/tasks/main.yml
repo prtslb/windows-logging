@@ -1,0 +1,4 @@
+---
+
+- include_tasks: windows-logging-registry.yml
+#- include_tasks: windows-logging-wevtutil.yml

@@ -1,0 +1,15 @@
+---
+
+- name: Ensure ansible directories exist
+  win_file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ win_temp_dir }}"
+    - "{{ win_log_dir }}"
+
+- include: windows-audit.yml
+- include: windows-audit-files.yml
+  when: win_audit_files
+- include: windows-audit-reg.yml
+  when: win_audit_registry

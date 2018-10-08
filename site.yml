@@ -1,0 +1,34 @@
+---
+- name: configure Windows logging
+  hosts: windows
+  tasks:
+  - debug:
+      msg: "Install role: ansible-win-audit"
+  - import_role:
+      name: ansible-win-audit
+  - debug:
+      msg: "Install role complete."
+  - debug:
+      msg: "Install role: ansible-win-eventlog"
+  - import_role:
+      name: ansible-win-eventlog
+  - debug:
+      msg: "Install roles complete."
+  - debug:
+      msg: "Install role: ansible-win-osquery"
+  - import_role:
+      name: ansible-win-osquery
+  - debug:
+      msg: "Install roles complete."
+  - debug:
+      msg: "Install role: ansible-win-powershell"
+  - import_role:
+      name: ansible-win-powershell
+  - debug:
+      msg: "Install roles complete."
+  - debug:
+      msg: "Install role: ansible-win-sysmon"
+  - import_role:
+      name: ansible-win-sysmon
+  - debug:
+      msg: "Install roles complete."
