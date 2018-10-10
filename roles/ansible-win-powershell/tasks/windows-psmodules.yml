@@ -3,7 +3,7 @@
 #- name: Temporarily trust PSGallery repository
 #  win_shell: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
- name: Install NuGet
+- name: Install NuGet
   win_shell: "Install-PackageProvider -Name NuGet -Force"
 
 - name: Install desired Powershell modules
