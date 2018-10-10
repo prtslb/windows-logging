@@ -8,7 +8,7 @@
     type: dword
 
 - name: Auditpol flush current setting
-  win_shell: "auditpol /flush"
+  win_shell: "auditpol /clear /y"
 
 #- name: Common | Configure Windows Audit policies
 #  win_command: AuditPol /Set /Category:"{{ item }}" /Failure:Enable /Success:Enable
