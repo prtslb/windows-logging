@@ -74,8 +74,8 @@ win_auditpol_subcat_enable:
   - { cat: 'Object Access', sub: 'Application Generated', fail: true, success: true }
   - { cat: 'Object Access', sub: 'Handle Manipulation', fail: true, success: true }
   - { cat: 'Object Access', sub: 'File Share', fail: true, success: true }
-  - { cat: 'Object Access', sub: 'Filtering Platform Packet Drop', fail: true, success: true }
-  - { cat: 'Object Access', sub: 'Filtering Platform Connection', fail: true, success: true }
+  - { cat: 'Object Access', sub: 'Filtering Platform Packet Drop', fail: false, success: false }
+  - { cat: 'Object Access', sub: 'Filtering Platform Connection', fail: false, success: false }
   - { cat: 'Object Access', sub: 'Other Object Access Events', fail: true, success: true }
   - { cat: 'Object Access', sub: 'Detailed File Share', fail: true, success: true }
   - { cat: 'Policy Change', sub: 'Audit Policy Change', fail: true, success: true }
