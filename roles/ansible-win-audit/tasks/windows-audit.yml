@@ -1,4 +1,11 @@
 ---
+# https://support.microsoft.com/en-us/help/921468/security-auditing-settings-are-not-applied-to-windows-vista-based-and
+- name: Disable "Force audit policy subcategory settings to override audit policy category settings "
+  win_regedit:
+    path: HKLM:\System\CurrentControlSet\Control\Lsa
+    name: SCENoApplyLegacyAuditPolicy
+    data: 0
+    type: dword
 
 - name: Common | Configure Windows Audit policies
   win_command: AuditPol /Set /Category:"{{ item }}" /Failure:Enable /Success:Enable
