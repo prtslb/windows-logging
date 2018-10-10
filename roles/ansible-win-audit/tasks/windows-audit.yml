@@ -7,6 +7,14 @@
     data: 0
     type: dword
 
+# https://www.stigviewer.com/stig/windows_8_8.1/2014-04-02/finding/V-43239
+- name: Enable command line data in process creation events
+  win_regedit:
+    path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit\
+    name: ProcessCreationIncludeCmdLine_Enabled
+    data: 1
+    type: dword
+
 - name: Auditpol flush current setting
   win_shell: "auditpol /clear /y"
 

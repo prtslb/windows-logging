@@ -57,15 +57,15 @@ win_auditpol_subcat_enable:
   - { cat: 'DS Access', sub: 'Directory Service Replication', fail: true, success: true }
   - { cat: 'DS Access', sub: 'Directory Service Access', fail: true, success: true }
   - { cat: 'DS Access', sub: 'Directory Service Changes', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'Account Lockout', fail: false, success: true }
-  - { cat: 'Logon and Logoff', sub: 'Logoff', fail: false, success: true }
-  - { cat: 'Logon and Logoff', sub: 'Logon', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'Special Logon', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'IPsec Main Mode', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'IPsec Quick Mode', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'IPsec Extended Mode', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'Other Logon/Logoff Events', fail: true, success: true }
-  - { cat: 'Logon and Logoff', sub: 'Network Policy Server', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'Account Lockout', fail: false, success: true }
+  - { cat: 'Logon/Logoff', sub: 'Logoff', fail: false, success: true }
+  - { cat: 'Logon/Logoff', sub: 'Logon', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'Special Logon', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'IPsec Main Mode', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'IPsec Quick Mode', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'IPsec Extended Mode', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'Other Logon/Logoff Events', fail: true, success: true }
+  - { cat: 'Logon/Logoff', sub: 'Network Policy Server', fail: true, success: true }
   - { cat: 'Object Access', sub: 'File System', fail: true, success: true }
   - { cat: 'Object Access', sub: 'Registry', fail: true, success: true }
   - { cat: 'Object Access', sub: 'Kernel Object', fail: true, success: true }
