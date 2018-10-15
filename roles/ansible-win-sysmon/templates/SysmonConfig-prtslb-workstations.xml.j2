@@ -45,19 +45,19 @@
       </ProcessCreate>
       <!-- Log all remote thread creation events -->
       <CreateRemoteThread onmatch="exclude">
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
-          <Image condition="end with">osqueryd\osqueryd.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <SourceImage condition="end with">osqueryd\osqueryd.exe</Image>
       </CreateRemoteThread>
       <!-- Log all file creation time stamps -->
       <FileCreateTime onmatch="exclude">
@@ -119,22 +119,7 @@
       <!--SYSMON EVENT ID 10 : INTER-PROCESS ACCESS-->
       <!--DATA: UtcTime, SourceProcessGuid, SourceProcessId, SourceThreadId, SourceImage, TargetProcessGuid, TargetProcessId, TargetImage, GrantedAccess, CallTrace-->
 <!-- FIXME! issue with Sysmon v7/schema version 4
-      <ProcessAccess onmatch="exclude">
-          SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
-          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
-          <SourceImage condition="contains">osqueryd.exe</Image>
-          <SourceImage condition="end with">taskmgr.exe</SourceImage>
-      </ProcessAccess>
+      <ProcessAccess onmatch="exclude" />
 -->
     </EventFiltering>
 </Sysmon>
