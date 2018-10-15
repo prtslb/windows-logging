@@ -1,0 +1,98 @@
+<!-- 
+   {{ ansible_managed }}
+   This is a Microsoft Sysmon configuration to be used on Windows workstations
+   v0.2.1 December 2016
+   Florian Roth (with the help and ideas of others)
+   
+   The focus of this configuration is 
+   - malware detection (execution)
+   - malware detection (network connections)
+   - exploit detection
+   It is not focussed on 
+   - hacking activity on workstation (bad admin, attacker)
+   
+   See Windows server base config: https://gist.github.com/Neo23x0/a4b4af9481e01e749409
+--> 
+<Sysmon schemaversion="4.00">
+    <!-- Capture MD5 Hashes -->
+    <HashAlgorithms>MD5,SHA1,SHA256</HashAlgorithms>
+    <EventFiltering>
+      <!-- Log all drivers except if the signature -->
+      <!-- contains Microsoft or Windows -->
+      <DriverLoad onmatch="exclude">
+          <Signature condition="contains">microsoft</Signature>
+          <Signature condition="contains">windows</Signature>
+      </DriverLoad>
+      <!-- Log all process creation events -->
+      <ProcessCreate onmatch="exclude">
+          <Image condition="end with">System32\SearchFilterHost.exe</Image>
+          <IntegrityLevel condition="is">AppContainer</IntegrityLevel>
+          <Image condition="image">C:\Windows\System32\audiodg.exe</Image>
+          <Image condition="end with">System32\SearchProtocolHost.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <Image condition="end with">osqueryd\osqueryd.exe</Image>
+      </ProcessCreate>
+      <!-- Log all remote thread creation events -->
+      <CreateRemoteThread onmatch="exclude" />
+      <!-- Log all file creation time stamps -->
+      <FileCreateTime onmatch="exclude" />
+      <!-- Do not log raw disk access (caused event flooding with certain disk encryption drivers) -->
+      <RawAccessRead onmatch="include" />
+      <!-- Do not log process termination -->
+      <ProcessTerminate onmatch="include" />
+      <!-- Log all registry events -->
+      <RegistryEvent onmatch="exclude" />
+      <!-- Log file creation events -->
+      <FileCreate onmatch="exclude" />
+      <!-- Log if file stream is created -->
+      <FileCreateStreamHash onmatch="exclude" />
+      <!-- Log all network traffic except Splunk, OSQuery-->
+      <NetworkConnect onmatch="exclude">
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <Image condition="contains">osqueryd.exe</Image>
+      </NetworkConnect>
+<!-- https://www.eideon.com/2017-09-09-THL01-Mimikatz/ -->
+      <!--SYSMON EVENT ID 10 : INTER-PROCESS ACCESS-->
+      <!--DATA: UtcTime, SourceProcessGuid, SourceProcessId, SourceThreadId, SourceImage, TargetProcessGuid, TargetProcessId, TargetImage, GrantedAccess, CallTrace-->
+<!-- FIXME! issue with Sysmon v7/schema version 4
+      <ProcessAccess onmatch="exclude">
+          SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <SourceImage condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <SourceImage condition="contains">osqueryd.exe</Image>
+          <SourceImage condition="end with">taskmgr.exe</SourceImage>
+      </ProcessAccess>
+-->
+    </EventFiltering>
+</Sysmon>
