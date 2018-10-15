@@ -33,6 +33,7 @@
           <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
@@ -83,7 +84,20 @@
       <RegistryEvent onmatch="exclude" />
       <!-- Log file creation events -->
       <FileCreate onmatch="exclude">
-          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <TargetFilename condition="contains">splunk.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk.exe</TargetFilename>
+          <TargetFilename condition="contains">splunkd.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-winprintmon.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-rgmon.exe</TargetFilename>
+          <TargetFilename condition="contains">btool.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-powershell.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-netmon.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-admon.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-MonitorNHandle.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-winevtlog.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-perfmon.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk-wmi.exe</TargetFilename>
+          <TargetFilename condition="contains">splunk.exe</TargetFilename>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
           <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
