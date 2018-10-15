@@ -44,9 +44,37 @@
           <Image condition="end with">osqueryd\osqueryd.exe</Image>
       </ProcessCreate>
       <!-- Log all remote thread creation events -->
-      <CreateRemoteThread onmatch="exclude" />
+      <CreateRemoteThread onmatch="exclude">
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <Image condition="end with">osqueryd\osqueryd.exe</Image>
+      </CreateRemoteThread>
       <!-- Log all file creation time stamps -->
-      <FileCreateTime onmatch="exclude" />
+      <FileCreateTime onmatch="exclude">
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <Image condition="end with">osqueryd\osqueryd.exe</Image>
+      </FileCreateTime>
       <!-- Do not log raw disk access (caused event flooding with certain disk encryption drivers) -->
       <RawAccessRead onmatch="include" />
       <!-- Do not log process termination -->
@@ -54,7 +82,21 @@
       <!-- Log all registry events -->
       <RegistryEvent onmatch="exclude" />
       <!-- Log file creation events -->
-      <FileCreate onmatch="exclude" />
+      <FileCreate onmatch="exclude">
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunkd.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winprintmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-rgmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\btool.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-powershell.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-netmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-admon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-MonitorNHandle.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-winevtlog.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-perfmon.exe</Image>
+          <Image condition="end with">SplunkUniversalForwarder\bin\splunk-wmi.exe</Image>
+          <Image condition="end with">osqueryd\osqueryd.exe</Image>
+      </FileCreate>
       <!-- Log if file stream is created -->
       <FileCreateStreamHash onmatch="exclude" />
       <!-- Log all network traffic except Splunk, OSQuery-->
